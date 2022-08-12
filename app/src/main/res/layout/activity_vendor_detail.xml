@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VendorDetailActivity">
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="48dp"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/black" />
+
+    <TextView
+        android:id="@+id/orderdetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Product Details"
+        android:textColor="@color/black"
+        android:textSize="18.5dp"
+        android:visibility="visible"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView6" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:layout_marginTop="20dp"
+        android:background="#DBCDCDCD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/orderdetails" />
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_vendor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="18dp"
+        android:src="@drawable/ic_baseline_search_24"
+        app:layout_constraintBottom_toBottomOf="@+id/orderdetails"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/orderdetails"
+        app:tint="@color/AppTextColour" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="20dp"
+        android:scrollbars="none"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_all"
+                android:layout_width="60dp"
+                android:layout_height="38dp"
+                android:layout_gravity="left"
+                android:clickable="true"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/categoryfront"
+                app:strokeWidth="1dp">
+
+                <TextView
+                    android:id="@+id/all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="All"
+                    android:textColor="@color/AppTextColour" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_complaint"
+                android:layout_width="110dp"
+                android:layout_height="38dp"
+                android:layout_gravity="left"
+                android:layout_marginLeft="12dp"
+                android:clickable="true"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/categoryfront"
+                app:strokeWidth="1dp">
+
+                <TextView
+                    android:id="@+id/compliant"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:gravity="center"
+                    android:text="Compliant"
+                    android:textColor="@color/AppTextColour" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+
+                android:id="@+id/card_noncompliant"
+                android:layout_width="140dp"
+                android:layout_height="38dp"
+                android:layout_gravity="left"
+                android:layout_marginLeft="12dp"
+                android:clickable="true"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/categoryfront"
+                app:strokeWidth="1dp">
+
+                <TextView
+                    android:id="@+id/noncompliant"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:gravity="center"
+                    android:text="Non-Compliant"
+                    android:textColor="@color/AppTextColour" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+
+                android:id="@+id/cardstats"
+                android:layout_width="84dp"
+                android:layout_height="38dp"
+                android:layout_gravity="left"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="48dp"
+                android:clickable="true"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/categoryfront"
+                app:strokeWidth="1dp">
+
+                <TextView
+                    android:id="@+id/stats"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:gravity="center"
+                    android:text="Stats"
+                    android:textColor="@color/AppTextColour" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="160dp"
+
+        android:orientation="vertical"
+
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView2"
+        app:shimmer_duration="800">
+
+        <!-- Adding 7 rows of placeholders -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/shimmer_placeholder" />
+
+            <include layout="@layout/shimmer_placeholder" />
+
+            <include layout="@layout/shimmer_placeholder" />
+
+            <include layout="@layout/shimmer_placeholder" />
+
+            <include layout="@layout/shimmer_placeholder" />
+
+            <include layout="@layout/shimmer_placeholder" />
+
+            <include layout="@layout/shimmer_placeholder" />
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/productrecycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="180dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/notfound"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:src="@drawable/ic_undraw_not_found_5l0w"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/shimmer_view_container"
+        app:layout_constraintEnd_toEndOf="@+id/shimmer_view_container"
+        app:layout_constraintStart_toStartOf="@+id/productrecycler"
+        app:layout_constraintTop_toTopOf="@+id/productrecycler"
+        app:layout_constraintVertical_bias="0.32" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
